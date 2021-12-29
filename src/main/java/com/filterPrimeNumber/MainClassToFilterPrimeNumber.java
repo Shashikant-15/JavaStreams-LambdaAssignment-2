@@ -6,16 +6,21 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+// create a public class as task required
 public class MainClassToFilterPrimeNumber {
 
-    // using stream to filtering random prime number
+     /**
+     *  stream to filtering random prime number
+     * @param numbersList it displays
+     * @return  it will return random prime number
+     */
     public static List<Integer> filterPrimeNumbers(List<Integer> numbersList){
         return numbersList.stream()
                 .filter(number-> IntStream.rangeClosed(2, number/2).noneMatch(i -> number%i == 0))
-                .sorted()
+                .sorted()                           // used for sorting the List
                 .collect(Collectors.toList());
     }
-
+    // main method called
     public static void main(String[] arguments) {
 
         List<Integer> numbersList = new ArrayList<>();              // used to creating a list of integer
