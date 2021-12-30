@@ -6,7 +6,10 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-// create a public class as task required
+
+/**
+ * Represents a FilterPrimeNumber class to filter a prime no.
+ */
 public class MainClassToFilterPrimeNumber {
 
      /**
@@ -20,7 +23,11 @@ public class MainClassToFilterPrimeNumber {
                 .sorted()                           // used for sorting the List
                 .collect(Collectors.toList());
     }
-    // main method called
+   
+     /**
+     *  main method called to implement filter a prime number among list of 100.
+     * @param arguments  passes to method
+     */
     public static void main(String[] arguments) {
 
         List<Integer> numbersList = new ArrayList<>();              // used to creating a list of integer
